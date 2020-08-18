@@ -1,6 +1,6 @@
-# Arknights_Anti-addiction_Crack 
+# Arknights_Anti-addiction_Cheater 
 
-明日方舟防沉迷破解 / Arknights_Anti-addiction_Crack 
+明日方舟防沉迷破解 / Arknights_Anti-addiction_Cheater  
 
 利用 [mitmproxy](https://www.mitmproxy.org/) 来实现对明日方舟数据的中间人攻击，从而实现防沉迷的破解。
 通过设置PAC代理的方式可以支持任意设备、模拟器使用，支持多个用户同时使用。
