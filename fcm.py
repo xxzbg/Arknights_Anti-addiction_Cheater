@@ -25,7 +25,7 @@ class fcm:
                 entryGame=False
             else:
                 flow.response = http.HTTPResponse.make(404)
-            if j['result']==3:
+            if j['message'][:6]=='您已达到本日':
                 print('明日方舟防沉迷破解: 您已达到本日在线时长上限或不在可游戏时间范围内，破解后仍可以继续游戏，但请合理安排游戏时间。')
             else:
                 s = 5400-j['timeLeft']
