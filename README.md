@@ -9,7 +9,7 @@
 
 ## 使用说明
 
-1. 下载mitmdump.exe，放入脚本同级目录。
+1. 下载[mitmdump.exe](https://mitmproxy.org/downloads/)，放入脚本同级目录。
 
 2. 执行 明日方舟防沉迷破解.bat。
 
