@@ -26,7 +26,7 @@
 #### 注：
 - 按下ctrl+c关闭破解
 - 有时候mitmdump.exe会卡住，这时候按下ctrl+c可以让其恢复(此时要按下两次ctrl+c关闭破解)。
-- 此方法在安卓7.0以上中受限制(iOS安装描述文件后全版本都可以)，如果你是安卓7.0以上，请参考:<br/>解决方法1：~~使用安卓7.0以下版本的手机。~~<br/>解决方式2：root手机，安装 Xposed + JustTrustMe。<br/>解决方式3：不root，使用 VirtualXposed、太极等 + JustTrustMe。或使用安卓内模拟器 如:VMOS等。
+- 此方法在安卓7.0以上中受限制(iOS安装描述文件后全版本都可以)，如果你是安卓7.0以上，请参考:<br/>解决方法1：~~使用安卓7.0以下版本的手机。~~<br/>解决方式2：Root手机，安装 Xposed + JustTrustMe。<br/>解决方式3：不Root，使用 VirtualXposed、太极等 + JustTrustMe。或使用安卓内模拟器 如:VMOS等。
 
 ## 修改端口
 明日方舟防沉迷破解.bat 第二行

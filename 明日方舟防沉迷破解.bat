@@ -2,6 +2,12 @@
 set porxy=12450
 :run
 cls
+echo.
+echo.此破解方法在安卓7.0以上中受限制(iOS安装描述文件后全版本都可以)，如果你是安卓7.0以上，请参考:
+echo.    解决方法1：使用安卓7.0以下版本的手机。
+echo.    解决方式2：Root手机，安装 Xposed + JustTrustMe。
+echo.    解决方式3：不Root，使用 VirtualXposed、太极等 + JustTrustMe。或使用安卓内模拟器 如:VMOS等。
+echo.
 echo.请在手机或模拟器中完成以下配置：
 echo.1.确保手机或模拟器和电脑在同一局域网下。
 echo.2.建议在游戏开始唤醒时进行以下操作，防止拦截游戏更新。
@@ -20,4 +26,5 @@ pause
 echo.
 echo.按下ctrl+c关闭破解
 echo.有时候mitmdump.exe会卡住，这时候按下ctrl+c可以让其恢复(此时要按下两次ctrl+c关闭破解)。
+echo.
 mitmdump.exe -s .\fcm.py --ssl-insecure -p %porxy% --no-http2 -q
