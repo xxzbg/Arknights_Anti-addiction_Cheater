@@ -17,7 +17,7 @@ class fcm:
         global entryGame
         if flow.request.url.startswith("https://ak-fs.hypergryph.com/announce/Android/preannouncement.meta.json") or flow.request.url.startswith("https://ak-fs.hypergryph.com/announce/IOS/preannouncement.meta.json"):
             entryGame=True #进入游戏开始唤醒界面都会调用这个
-        if flow.request.url.startswith("https://ak-as.hypergryph.com:9443/online/v1/ping"):
+        if flow.request.url.startswith("https://as.hypergryph.com/online/v1/ping"):
             j=json.loads(flow.response.get_text())
             if entryGame:
                 flow.response.set_text('{"result":0,"message":"OK","interval":5400,"timeLeft":-1,"alertTime":600}')
