@@ -48,9 +48,12 @@ _iOS操作_
 - 按下ctrl+c关闭破解
 - 有时候mitmdump.exe会卡住，这时候按下ctrl+c可以让其恢复(此时要按下两次ctrl+c关闭破解)。
 
-## 修改端口
-明日方舟防沉迷破解.bat 第二行
+## 修改端口和模式
+config.ini 中
 ```
-set porxy=12450
+[default]
+port = 12450
+mode = "dump"
 ```
-"porxy="后为端口，修改即可。
+"port = "后为端口，修改即可。
+"mode = "后为模式，共有web、dump、console三种模式
