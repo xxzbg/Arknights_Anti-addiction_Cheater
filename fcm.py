@@ -61,8 +61,8 @@ class fcm:
 
     def response(self, flow: HTTPFlow):
         if flow.request.url.startswith(
-                "https://ak-fs.hypergryph.com/announce/Android/preannouncement.meta.json") or flow.request.url.startswith(
-            "https://ak-fs.hypergryph.com/announce/IOS/preannouncement.meta.json"):
+            "https://ak-conf.hypergryph.com/config/prod/announce_meta/Android/preannouncement.meta.json") or flow.request.url.startswith(
+            "https://ak-conf.hypergryph.com/config/prod/announce_meta/IOS/preannouncement.meta.json"):
             self.entryGame = True  # 进入游戏开始唤醒界面都会调用这个
         if flow.request.url.startswith("https://as.hypergryph.com/online/v1/ping"):
             j = json.loads(flow.response.get_text())
