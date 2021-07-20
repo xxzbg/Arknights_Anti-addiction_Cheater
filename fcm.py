@@ -80,6 +80,9 @@ class fcm:
                 ss = int(s - h * 3600 - m * 60)
                 print('游戏剩余时间 ' + str(h) + '小时' + str(m) + '分钟' + str(ss) + '秒 修改为 不限制，但请合理安排游戏时间。')
 
+addons = [
+    fcm()
+]
 
 if __name__ == "__main__":
     if not get_config():
