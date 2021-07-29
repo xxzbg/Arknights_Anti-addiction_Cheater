@@ -115,6 +115,6 @@ if __name__ == "__main__":
     方式2：Root 手机，安装 Xposed + JustTrustMe。
     方式3：不Root，使用 VirtualXposed、太极等 + JustTrustMe。或将游戏安装到安卓内模拟器 如: VMOS 等。
 """ % (get_host_ip(), str(Config['port'])))
-    os.system('pause')
+    input('按[回车]继续...')
     master.addons.add(fcm())
     master.run()
