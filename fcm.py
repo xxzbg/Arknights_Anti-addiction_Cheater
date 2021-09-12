@@ -1,33 +1,27 @@
-from mitmproxy.addons import export
 from mitmproxy.options import Options
-from mitmproxy.proxy.config import ProxyConfig
-from mitmproxy.proxy.server import ProxyServer
 from mitmproxy.tools.dump import DumpMaster
 from mitmproxy.tools.web.master import WebMaster
 from mitmproxy.tools.console.master import ConsoleMaster
 from mitmproxy.http import HTTPFlow
-from mitmproxy import master, ctx, http
+from mitmproxy import master, http
 from configparser import ConfigParser
-import json, socket, os, time
+import json, socket
 
 Config = {'port': 12450, 'mode': 'dump'}
 
 
 def run_web(options):
     webserver = WebMaster(options)
-    webserver.server = ProxyServer(ProxyConfig(options))
     return webserver
 
 
 def run_dump(options):
     server = DumpMaster(options, with_termlog=False, with_dumper=False)
-    server.server = ProxyServer(ProxyConfig(options))
     return server
 
 
 def run_console(options):
     server = ConsoleMaster(options)
-    server.server = ProxyServer(ProxyConfig(options))
     return server
 
 
