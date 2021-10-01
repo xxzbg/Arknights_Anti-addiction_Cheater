@@ -51,7 +51,22 @@ def get_host_ip():
 class fcm:
     def __init__(self):
         print('明日方舟防沉迷破解已在端口%s开启' % Config['port'])
+        self.fklist = ["line1-sdk-center-login-sh.biligame.net",
+                        "line2-sdk-center-login-sh.biligame.net",
+                        "line3-sdk-center-login-sh.biligame.net",
+                        "line3-sdkcenter-login.bilibiligame.net",
+                        "p.biligame.com",
+                        "line1-log.biligame.net",
+                        "line2-log.biligame.net",
+                        "line3-log.biligame.net",
+                        "line1-login.biligame.net",
+                        "line2-login.biligame.net",
+                        "line3-login.biligame.net"]
         self.entryGame = True
+    
+    def http_connect(self, flow: HTTPFlow):
+        if (flow.request.host in self.fklist or not self.entryGame):
+            flow.request.host = "127.0.0.1"
 
     def response(self, flow: HTTPFlow):
         if flow.request.url.startswith(
@@ -63,8 +78,6 @@ class fcm:
             if self.entryGame:
                 flow.response.set_text('{"result":0,"message":"OK","interval":5400,"timeLeft":-1,"alertTime":600}')
                 self.entryGame = False
-            else:
-                flow.response = http.HTTPResponse.make(404)
             if j['message'][:6] == '您已达到本日':
                 print('您已达到本日在线时长上限或不在可游戏时间范围内，破解后仍可以继续游戏，但请合理安排游戏时间。')
             else:
