@@ -11,10 +11,16 @@
 ### 修改端口和模式(可选)
 
 端口及模式在`config.ini` 中
-```
+```ini
 [default]
 port = 12450 // 可修改1024~65535, 无特殊情况无需修改
 mode = "dump" // 共有web、dump、console三种模式
+```
+
+### 安装依赖并运行
+```bash
+pip3 install -r requirments.txt
+python fcm.py
 ```
 
 ### 安装证书
