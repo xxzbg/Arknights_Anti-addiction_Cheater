@@ -7,6 +7,16 @@
 
 
 ## 配置 mitmproxy
+
+### 修改端口和模式(可选)
+
+端口及模式在`config.ini` 中
+```
+[default]
+port = 12450 // 可修改1024~65535, 无特殊情况无需修改
+mode = "dump" // 共有web、dump、console三种模式
+```
+
 ### 安装证书
 #### IOS
 适用范围: iOS通过安装描述文件后全版本均可使用。
@@ -46,16 +56,6 @@ _iOS操作_
 #### 注意事项
 - 按下 Ctrl+C 关闭破解
 - 有时候 mitmdump.exe 会卡住，这时候按下 Ctrl+C 可以让其恢复 (此时要按下两次Ctrl+C关闭破解)
-
-## 修改端口和模式
-config.ini 中
-```
-[default]
-port = 12450
-mode = "dump"
-```
-"port = "后为端口，修改即可。
-"mode = "后为模式，共有web、dump、console三种模式
 
 ## 免责声明
 本程序仅供学习使用，请在当地法律法规下使用。
