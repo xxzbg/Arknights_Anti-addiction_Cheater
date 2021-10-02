@@ -24,13 +24,29 @@ python fcm.py
 ```
 
 ### 安装证书
-#### IOS
+请在手机或模拟器中完成以下配置：
+1. 确保手机或模拟器和电脑在同一局域网下。
+
+#### IOS 苹果
 适用范围: iOS通过安装描述文件后全版本均可使用。
 
+2. 进入手机或模拟器WLAN(Wi-Fi)设置配置手机代理。
+
+iOS：HTTP代理--配置代理--手动
+![](https://i0.hdslb.com/bfs/article/ec7e3ed3fb3b1bb3df5cf24a33922cd39e6c04a7.jpg)
+
+3. 进入网站 http://mitm.it 下载描述文件并安装。
+   
+4. 设置--通用--关于本机--证书信任设置--mitmproxy--打开
+> :warning: 此步必须在上一步完成后且电脑端开启着mitmproxy或运行着脚本时候进行)
+
+![](https://i0.hdslb.com/bfs/article/e478d1bc37a358899d670a6bb2f9744dcff51abe.jpg)
+
 #### Android 安卓
+
 对于 Https 的中间人攻击需要自签 SSL 证书,然后 Android 从 7.0 开始系统不再信任用户 CA 证书。
 *（应用targetSdkVersion >= 24时生效，如果targetSdkVersion < 24即使系统是7.0+依然会信任）*
-对于大部分模拟器来说,版本均在 Android 7 以下, 可不必担心。
+对于大部分模拟器来说, 版本均在 Android 7 以下, 可直接使用。
 
 **Android 7.0及以上**
 
@@ -38,30 +54,21 @@ python fcm.py
 - 解决方式2：不Root，使用 VirtualXposed、太极等 + JustTrustMe。或使用安卓内模拟器 如:VMOS等。
 
 
-请在手机或模拟器中完成以下配置：
-1. 确保手机或模拟器和电脑在同一局域网下。
+
 2. 进入手机或模拟器WLAN(Wi-Fi)设置配置手机代理。
-   
->安卓：修改网络--高级选项--代理--手动
-iOS：HTTP代理--配置代理--手动
-将服务器和端口设置为mitmproxy所监听的端口和主机ip。
 
- >_例如此时我的电脑和手机处于同一局域网下，电脑的ip为192.168.1.48，端口在12450上开放。
- _![](https://i0.hdslb.com/bfs/article/318e9a0abec227de118d118144271d7611032704.jpg)
- _安卓操作_![](https://i0.hdslb.com/bfs/article/ec7e3ed3fb3b1bb3df5cf24a33922cd39e6c04a7.jpg)
- _iOS操作_
+安卓：修改网络--高级选项--代理--手动
+![](https://i0.hdslb.com/bfs/article/318e9a0abec227de118d118144271d7611032704.jpg)
+>将服务器和端口设置为mitmproxy所监听的端口和主机ip。
+例如此时我的电脑和手机处于同一局域网下，电脑的ip为192.168.1.48，端口在12450上开放。
 
-3. 进入网站 http://mitm.it 下载证书(iOS为描述文件)并安装。
-   <br>iOS多一步：设置--通用--关于本机--证书信任设置--mitmproxy--打开<br>_(此步必须在上一步完成后且电脑端开启着mitmproxy或运行着脚本时候进行)_
+3. 进入网站 http://mitm.it 下载证书并安装。
+![](https://i0.hdslb.com/bfs/article/3c6435bb30b234adfd323673e590dd8c10909bc0.jpg)
 
->![](https://i0.hdslb.com/bfs/article/3c6435bb30b234adfd323673e590dd8c10909bc0.jpg)
-_安卓操作_
-![](https://i0.hdslb.com/bfs/article/e478d1bc37a358899d670a6bb2f9744dcff51abe.jpg)
-_iOS操作_
 
 #### 注意事项
-- 按下 Ctrl+C 关闭破解
-- 有时候 mitmdump.exe 会卡住，这时候按下 Ctrl+C 可以让其恢复 (此时要按下两次Ctrl+C关闭破解)
+- 按下 Ctrl+C 关闭电脑端程序
+- 有时候 mitmdump.exe 会卡住，这时候按下 Ctrl+C 可以让其恢复 (此时要按下两次Ctrl+C关闭程序)
 
 ## 免责声明
 本程序仅供学习使用，请在当地法律法规下使用。
