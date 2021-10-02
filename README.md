@@ -1,9 +1,9 @@
 # Arknights_Anti-addiction_Cheater 
 
-明日方舟防沉迷破解 / Arknights_Anti-addiction_Cheater  
+基于 [mitmproxy](https://www.mitmproxy.org/) 实现中间人攻击绕开明日方舟防沉迷限制
 
-利用 [mitmproxy](https://www.mitmproxy.org/) 来实现对明日方舟数据的中间人攻击，从而实现防沉迷的破解。
-通过设置PAC代理的方式可以支持任意设备、模拟器使用，支持多个用户同时使用。
+通过设置 HTTP/PAC 代理的方式可以支持任意数量的设备、模拟器等多个用户使用。
+*网络负载的承受范围之内*
 
 
 ## 配置 mitmproxy
@@ -25,6 +25,7 @@ python fcm.py
 
 ### 安装证书
 请在手机或模拟器中完成以下配置：
+
 1. 确保手机或模拟器和电脑在同一局域网下。
 
 #### IOS 苹果
@@ -45,7 +46,9 @@ iOS：HTTP代理--配置代理--手动
 #### Android 安卓
 
 对于 Https 的中间人攻击需要自签 SSL 证书,然后 Android 从 7.0 开始系统不再信任用户 CA 证书。
+
 *（应用targetSdkVersion >= 24时生效，如果targetSdkVersion < 24即使系统是7.0+依然会信任）*
+
 对于大部分模拟器来说, 版本均在 Android 7 以下, 可直接使用。
 
 **Android 7.0及以上**
@@ -72,4 +75,5 @@ iOS：HTTP代理--配置代理--手动
 
 ## 免责声明
 本程序仅供学习使用，请在当地法律法规下使用。
+
 不承担对于用户就使用本程序所提供的功能所引致的任何直接、间接、附带、从属等损失。
