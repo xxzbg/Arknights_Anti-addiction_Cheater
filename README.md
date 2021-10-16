@@ -43,7 +43,7 @@ python fcm.py
 或者
 
 ```bash
-mitmdump -s fcm-nobilibili.py --listen-host 0.0.0.0 --listen-port 12450
+mitmdump -s fcm-addons.py --listen-host 0.0.0.0 --listen-port 12450
 ```
 
 6. 进行手机端的操作
